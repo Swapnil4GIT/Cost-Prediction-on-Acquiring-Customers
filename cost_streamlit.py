@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import datetime
+import graphviz
 
 # Heading of the project
 st.write(
@@ -69,6 +70,7 @@ with col1:
         </p>
         """, unsafe_allow_html=True
     )
+    st.image("./Data/Questionmark.jpg")
 
 #Data description
 
@@ -118,3 +120,18 @@ with col2:
         </p>
         """, unsafe_allow_html=True
     )
+
+#EDA
+#Tree chart
+st.write("#")
+st.write("#")
+
+st.write(
+    """
+    <p style="font-size: 18px;">
+    Exploratory Data Analysis
+    </p>
+     """, unsafe_allow_html=True
+)
+
+st.image("./Data/EDA.png", caption="Data Grouped at Different Levels", output_format="auto")
