@@ -177,7 +177,7 @@ st.write(
 st.write(
     """
     <p style="font-size: 17px;">
-    Feature : Promotion Names
+    <i>Feature</i> : Promotion Names
     </p>
      """, unsafe_allow_html=True
 )
@@ -188,13 +188,21 @@ with col1:
     st.write(
     """
     <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
     Customers Acquired
     </p>
      """, unsafe_allow_html=True
     )
     st.image("./Images/promopie.png")
 
-with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -209,7 +217,7 @@ st.write("#")
 st.write(
     """
     <p style="font-size: 17px;">
-    Feature : Media Type
+    <i>Feature</i> : Media Type
     </p>
      """, unsafe_allow_html=True
 )
@@ -220,13 +228,21 @@ with col1:
     st.write(
     """
     <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
     Customers Acquired
     </p>
      """, unsafe_allow_html=True
     )
     st.image("./Images/mediatypepie.png")
 
-with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -235,3 +251,43 @@ with col2:
      """, unsafe_allow_html=True
     )
     st.image("./Images/mediatypebox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    Correlation among Store Level Features
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC <i> vs </i>Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/corrscatter.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Corr. among variables at store level
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/corrheatmap.png")
