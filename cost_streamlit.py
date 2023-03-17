@@ -2,6 +2,11 @@ import streamlit as st
 import pandas as pd
 import datetime
 import graphviz
+import matplotlib.pyplot as plt
+import seaborn as sns
+import warnings
+import plotly.express as px
+
 
 # Heading of the project
 st.write(
@@ -19,8 +24,8 @@ st.write(
 
 st.write(
     """
-    <p style="font-size: 18px;">
-    About FoodMart
+    <p style="font-size: 20px;">
+    <b>About FoodMart</b>
     </p>
      """, unsafe_allow_html=True
 )
@@ -51,14 +56,19 @@ with col2:
     )
  
 #Problem statements and value propositions
-st.write("#")
+
 col1,col2 = st.columns([2,3], gap='large')
 
 with col1:
+    st.write(
+        """
+        ***
+        """
+    )
     st.markdown(
         """
-        <p style="font-size: 18px;">
-        Problem Statement
+        <p style="font-size: 20px;">
+        <b>Problem Statement</b>
         </p>
         """, unsafe_allow_html=True
     )
@@ -70,15 +80,20 @@ with col1:
         </p>
         """, unsafe_allow_html=True
     )
-    st.image("./Data/Questionmark.jpg")
+    st.image("./Images/Questionmark.jpg")
 
 #Data description
 
 with col2:
+    st.write(
+        """
+        ***
+        """
+    )
     st.markdown(
         """
-        <p style="font-size: 18px;">
-        Data Quality Analysis
+        <p style="font-size: 20px;">
+        <b>Data Quality Analysis</b>
         </p>
         """, unsafe_allow_html=True
     )
@@ -121,6 +136,20 @@ with col2:
         """, unsafe_allow_html=True
     )
 
+# Read DataFrame
+st.write("#")
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>DataFrame</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+
+df = pd.read_csv('./Data/media prediction and its cost.csv')
+st.write(df.head(10))
+
 #EDA
 #Tree chart
 st.write("#")
@@ -128,10 +157,81 @@ st.write("#")
 
 st.write(
     """
-    <p style="font-size: 18px;">
-    Exploratory Data Analysis
+    <p style="font-size: 20px;">
+    <b>Exploratory Data Analysis</b>
     </p>
      """, unsafe_allow_html=True
 )
 
-st.image("./Data/EDA.png", caption="Data Grouped at Different Levels", output_format="auto")
+st.image("./Images/EDA.png", caption="Data Grouped at Different Levels", output_format="auto")
+
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>Features <i> w.r.t </i> acquired customers and CAC</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+
+st.write(
+    """
+    <p style="font-size: 17px;">
+    Feature : Promotion Names
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/promopie.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/promobox.png")
+
+#----
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    Feature : Media Type
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/mediatypepie.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/mediatypebox.png")
