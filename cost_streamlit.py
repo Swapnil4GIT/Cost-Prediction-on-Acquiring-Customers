@@ -291,3 +291,283 @@ with col2:
      """, unsafe_allow_html=True
     )
     st.image("./Images/corrheatmap.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> Food Category
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/foodcatpie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/foodcatbox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> Education
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/educationpie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/educationbox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> Member Card
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/membercardpie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/membercardbox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> Occupation
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/occupationpie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/occupationbox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> House Owner
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/houseownerpie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/houseownerbox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    <i>Feature:</i> Customer Salary
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Customers Acquired
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/incomepie.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    CAC Spread
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/incomebox.png")
+
+#--
+st.write("#")
+st.write(
+    """
+    <p style="font-size: 17px;">
+    Correlation among Product Level Features
+    </p>
+     """, unsafe_allow_html=True
+)
+
+col1, col2 = st.columns(2, gap='small')
+
+with col1:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Observations
+    </p>
+     """, unsafe_allow_html=True
+    )
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    Correlation map
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/productcorr.png")
+
+    st.write(
+    """
+    <p style="font-size: 17px;">
+    SRP <i> vs </i> CAC
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/SRPcaccorr.png")
