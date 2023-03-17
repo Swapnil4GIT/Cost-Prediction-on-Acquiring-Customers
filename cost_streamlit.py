@@ -474,6 +474,19 @@ with col2:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total member cards type categories available in input dataset are 4.
+    Most effective member card for customer acquisition is <i>Bronze</i> with % acquisition of 55.9%.
+    CAC has different spread and variance for different member card.
+    Median CAC is above $2.5M and below $3.0M for all categories of member cards.
+    \n\n
+    Out of the total customers acquired, 56% customers hold <i>Bronze Card</i>. This makes sense as not
+    everyone can have more privileged cards and major section of the customers falls into an average category.
+    </p>
+    """, unsafe_allow_html=True
+    )
 
 with col1:
     st.write(
