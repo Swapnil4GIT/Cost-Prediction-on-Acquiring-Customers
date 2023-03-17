@@ -177,7 +177,7 @@ st.write(
 st.write(
     """
     <p style="font-size: 17px;">
-    <i>Feature</i> : Promotion Names
+    <i>Feature</i> : Promotion Name
     </p>
      """, unsafe_allow_html=True
 )
@@ -191,6 +191,26 @@ with col1:
     Observations
     </p>
      """, unsafe_allow_html=True
+    )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total Promotions from the dataset are 49.
+    Most effective promos for customer acquisition are <i><u>Weekend Markdown</u></i> and 
+    <i><u>Price Savers</u></i> with % acquisition of 3.86% and 3.84% respectively.
+    CAC has good variability and distinctive spread under different campaign promos.
+    Median CAC is above $2.5M and below $3.0M for most of the promos.
+    \n\n
+    Promo names with customer acquisition of 3 to 4 percent are -
+    <i>Weekend Markdown, Two Day Sale, Price Savers, Price Winners, Save-It Sale, Super Duper Savers, Super Savers, One Day Sale </i>
+    \n\n
+    This gives us some sense that customers foot fall on weekend could be a catalyst in highest customer acquisition on
+    <i>Weekend Markdown</i> promo.
+    \n\n
+    <i>Price Savers</i> promo seems to be quite popular among the customers as it is almost as effective as 
+    <i>Weeken Markdown</i> promo.
+    </p>
+    """, unsafe_allow_html=True
     )
 
 with col2:
@@ -224,7 +244,7 @@ st.write(
 
 col1, col2 = st.columns(2, gap='small')
 
-with col1:
+with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -232,8 +252,28 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total media types from the given dataset are 13.
+    Most effective media type for customer acquisition are Daily paper, Radio with % acquisition of 11.3%.
+    CAC has good variability and distinctive spread under different media types.
+    Median CAC is above $2.5M and below $3.0M for all media type.
+    \n\n
+    Media types with customer acquisition of 8 to 9 percent are - 
+    <i>Product Attachment, Daily Paper/Radio/TV, Daily Paper, Street Handout, Radio, Sunday Paper</i> 
+    \n\n
+    Media types with customer acquisition of 6 to 7 percent are -
+    <i>Instore coupon, Sunday Paper/Radio, Cash Register Handout</i>
+    \n\n
+    Media types with customer acquisition of 5 to 6 percent are -
+    <i>TV, Bulk Mail, Sunday Paper/Radio/TV </i>
+    </p>
+    """, unsafe_allow_html=True
+    )
 
-with col2:
+
+with col1:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -272,6 +312,17 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Correlation between CAC (Customer Acquisition Cost) and Total Acquired Customers is non-linear.
+    This is important observation to help us choose the correct machine learning model to automate the cost predict feature.
+    \n\n
+    CAC shows positive correlation (<u>But NOT Strong i.e. around 0.5</u>) with store unit sales, store sales and store cost.
+    This makes us even more confident that the linear machine learning model would not give better results as far as store level features are concerned.
+    </p>
+    """, unsafe_allow_html=True
+    )
 
 with col2:
     st.write(
@@ -304,7 +355,7 @@ st.write(
 
 col1, col2 = st.columns(2, gap='small')
 
-with col1:
+with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -312,8 +363,24 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total food categories from the input dataset are 45.
+    Most effective food categories for customer acquisition are <i>Vegetables</i> and <i>Snack Foods</i> with % acquisition of 12.3% and 11.4%.
+    CAC has good variability and distinctive spread under different food categories.
+    Median CAC is above $2.5M and below $3.0M for almost all the food categories.
+    \n\n
+    Food categories with customer acquisition of 5 to 6 percent are -
+    <i>Dairy, Meat, Food</i>
+    \n\n
+    Since <i>Vegetables, Snack Foods, Dairy, Meat, Fruit, Jam and Jellies</i> together contribute around 45% of total customers acquired,
+    we can draw inference that grocery stores are important while doing promo campaigns.
+    </p>
+    """, unsafe_allow_html=True
+    )
 
-with col2:
+with col1:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -352,6 +419,21 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total education degrees from the input dataset are 5.
+    Most effective educational degree for customer acquisition are <i>partial high school</i> 
+    and <i>high school</i> with % acquisition of 30.1% and 29.5% respectively.
+    CAC has similar variability and spread for both all education categories.
+    Median CAC is above $2.5M and below $3.0M and is almost same for all education categories.
+    \n\n
+    We notice here that customer acquisition percentage falls as the level of education degree increases. We can draw few important inferences from this -
+    such as either the customers acquired are teenagers or young customers under 18 or customers with higher education are less interested to become a
+    registered customers by availing the promos. 
+    </p>
+    """, unsafe_allow_html=True
+    )
 
 with col2:
     st.write(
@@ -384,7 +466,7 @@ st.write(
 
 col1, col2 = st.columns(2, gap='small')
 
-with col1:
+with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -393,7 +475,7 @@ with col1:
      """, unsafe_allow_html=True
     )
 
-with col2:
+with col1:
     st.write(
     """
     <p style="font-size: 17px;">
