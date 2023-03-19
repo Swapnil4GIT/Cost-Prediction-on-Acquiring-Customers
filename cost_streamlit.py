@@ -1,12 +1,10 @@
 import streamlit as st
 import pandas as pd
 import datetime
-import graphviz
 import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 import plotly.express as px
-from PIL import Image
 
 # Heading of the project
 st.write(
