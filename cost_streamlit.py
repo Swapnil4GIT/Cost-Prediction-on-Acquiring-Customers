@@ -775,6 +775,7 @@ to reduce the variance of individual tree by bootstrap aggregration.
 </p>
 """, unsafe_allow_html=True
 )
+st.write('#')
 st.write(
     """
     <p style="font-size: 18px;">
@@ -792,6 +793,133 @@ better results. However with the depth of <i>max_depth=5</i> and maximum estimat
 </p>
 """, unsafe_allow_html=True
 )
+col1,col2 = st.columns(2, gap='large')
+with col1:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Default parameters</b>
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/defaultRFR.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Model Performance</b>
+    </p>
+     """, unsafe_allow_html=True
+    )    
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    MAE  :  0.052, 
+    RMSE :  0.777, 
+    MAPE :  0.0, 
+    R2   :  0.999\n
+    This model performance on test dataset is too good to believe. Upong further analysis, it is observed that since this is the model with 
+    default parameters, it used the default <i>max_depth</i> parameter which resulted in such a surprising results.
+    </p>
+    """, unsafe_allow_html=True
+    )
+#--
+st.write('#')
+st.write(
+    """
+    <p style="font-size: 18px;">
+    <b>Hyperparameter Tuning</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+Let's perform hyperparameter tuning on the model where the goal is to keep the number of estimators realistic and max depth should be sensible too.
+Hence upong doing further tuning with grid serach algorithm. 
+</p>
+""", unsafe_allow_html=True
+)
+col1,col2 = st.columns(2, gap='large')
+with col1:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Sensible parameters</b>
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/sensibleRFR.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Model Performance</b>
+    </p>
+     """, unsafe_allow_html=True
+    )    
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Here is the tricky part. If we want to keep the tree max_depth sensible then the observed parameter score is quite bad. Another observed phenomenon 
+    here is that increasing the number of estimators is not adding any value to the model performance. This makes rise to the thought of checking
+    on the input data's sparsity percentage and if there is any impact on the model performance due to sparse features.
+    </p>
+    """, unsafe_allow_html=True
+    )
+
+#--
+st.write('#')
+st.write(
+    """
+    <p style="font-size: 18px;">
+    <b>Sparsity Control</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+We noticed that the RandomForest Regressor is not able to learn the features properly and gave the accuracy
+as bad as 11% even after doing the hypertuning. We again noticed that if the depth of the tree increases then
+the model performance also goes up. This could very well be due to the sparse features created after one-hot 
+encoding. We are going to look at the sparse features and how their model performance gets affected with the
+different percentages of the sparsity in the data. 
+</p>
+""", unsafe_allow_html=True
+)
+col1,col2 = st.columns(2, gap='large')
+with col1:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Sparsity Control Graph</b>
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/sparsitycontrol.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Observations</b>
+    </p>
+     """, unsafe_allow_html=True
+    )    
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    We can notice that, sparse featues at 10%, 20% and 30% are causing no change to the model performance.
+    Also on the upper side we can notice that sparse features at 70% and 80% having almost same accuracy.
+    This gives the feeling of trying to make the dataset more dense and re-build the model and evaluate the
+    performance.
+    </p>
+    """, unsafe_allow_html=True
+    )
+
 st.write(
     """
     ***
