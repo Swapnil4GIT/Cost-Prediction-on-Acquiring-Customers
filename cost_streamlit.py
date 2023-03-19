@@ -730,3 +730,70 @@ with col1:
      """, unsafe_allow_html=True
     )
     st.image("./Images/SRPcaccorr.png")
+
+st.write(
+    """
+    ***
+    """
+)
+
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>Feature Encoding</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+We discovered during EDA that our dataset doesn't show linear behaviour when we analyzed and looked at
+the correlation map and relationship of target variable with various other continuous features. So We are
+aiming for the Tree Based model. After performing the one-hot encoding of the categorical variables we are arrived
+at the dataset of <i>60K * 214</i>.
+</p>
+""", unsafe_allow_html=True
+)
+st.write(
+    """
+    ***
+    """
+)
+#--
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>Model building</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+Since we are going to use the tree based machine learning model, we will first try with bagging approach where we will try
+to reduce the variance of individual tree by bootstrap aggregration.
+</p>
+""", unsafe_allow_html=True
+)
+st.write(
+    """
+    <p style="font-size: 18px;">
+    <b>Random Forest Regressor</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+Results of RandomForestRegressor are too good to believe and that raised the concern of overfitting. The parameters and the corresponding
+model evaluation results are mentioned for after hypertunning with different estimators and tree depth. During hypertunning it is observed that
+increasing the number of estimators was not adding much value to the improvement of the model. However maximizing the tree depth was giving much 
+better results. However with the depth of <i>max_depth=5</i> and maximum estimators of <i>n_estimators=500</i> didn't gave any promising results.
+</p>
+""", unsafe_allow_html=True
+)
+st.write(
+    """
+    ***
+    """
+)
