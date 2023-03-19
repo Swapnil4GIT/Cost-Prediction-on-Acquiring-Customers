@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import warnings
 import plotly.express as px
-
+from PIL import Image
 
 # Heading of the project
 st.write(
@@ -57,14 +57,13 @@ with col2:
  
 #Problem statements and value propositions
 
-col1,col2 = st.columns([2,3], gap='large')
-
+st.write(
+    """
+    ***
+    """
+)
+col1, col2 = st.columns([2,0.01],gap='small')
 with col1:
-    st.write(
-        """
-        ***
-        """
-    )
     st.markdown(
         """
         <p style="font-size: 20px;">
@@ -72,6 +71,7 @@ with col1:
         </p>
         """, unsafe_allow_html=True
     )
+    
     st.markdown(
         """
         <p style="font-size:15px;">
@@ -80,65 +80,30 @@ with col1:
         </p>
         """, unsafe_allow_html=True
     )
-    st.image("./Images/Questionmark.jpg")
-
+        
 #Data description
 
-with col2:
-    st.write(
-        """
-        ***
-        """
-    )
-    st.markdown(
-        """
-        <p style="font-size: 20px;">
-        <b>Data Quality Analysis</b>
-        </p>
-        """, unsafe_allow_html=True
-    )
-    st.markdown(
-        """
-        <ul>
-            <li>
-                <p style="font-size:15px;">
-                Available data volume of around 60K customers which were acquired in the past. The data contains their acquisition cost too
-                </p>
-            </li>
-            <li>
-                <p style="font-size:15px;">
-                Shape of data is 60428 * 40 i.e. the given dataset has 60428 rows and 40 columns
-                </p>
-            </li>
-            <li>
-                <p style="font-size:15px;">
-                There is no data point missing across all the features from the given dataset
-                </p>
-            </li>
-            <li>
-                <p style="font-size:15px;">
-                Available data types of features from the given dataset - Discrete numeric/non-numeric & Continuous numeric
-                </p>
-            </li>
-            <li>
-                <p style="font-size:15px;">
-                Total marketing cost of acquiring customers is approx. $60 million/year.
-                This is the consolidate customer acquisition cost for all the customers from the dataset.
-                </p>
-            </li>
-            <li>
-                <p style="font-size:15px;">
-                Target variable identified here is the cost of acquiring a customer.​
-               </p>
-            </li>
-        </ul>
-        </p>
-        """, unsafe_allow_html=True
-    )
+st.write(
+    """
+    ***
+    """
+)
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>Data Quality Analysis</b>
+    </p>
+    """, unsafe_allow_html=True
+)
+st.image("./Images/DQA.png", caption="Data Quality Analysis", output_format="auto")
+
 
 # Read DataFrame
-st.write("#")
-st.write("#")
+st.write(
+    """
+    ***
+    """
+)
 st.write(
     """
     <p style="font-size: 20px;">
