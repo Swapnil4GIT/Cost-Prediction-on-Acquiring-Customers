@@ -920,8 +920,120 @@ with col2:
     """, unsafe_allow_html=True
     )
 
+#--
+st.write('#')
+st.markdown(
+"""
+<p style="font-size:15px;">
+To reduce the sparsity, we tried target encoding followed by binning which then followed by one-hot-encoding.
+This has brought down the dataset dimensionality from 214 to 116. With this less sparse data, the RandomForestRegressor
+could achieve the accuracy of 30% which is quite an improvement over the previous model with R2 of 11%. But still the model is off by
+70% which means the model couldn't learn the features correctly. 
+</p>
+""", unsafe_allow_html=True
+)
+
 st.write(
     """
     ***
+    """
+)
+#--
+st.write(
+    """
+    <p style="font-size: 20px;">
+    <b>Boosting : GradientBoostingRegressor</b>
+    </p>
+     """, unsafe_allow_html=True
+)
+st.markdown(
+"""
+<p style="font-size:15px;">
+Since bagging approach couldn't learn the features properly we are shifting towards boosting technique where bias will be reduced instead of variance.
+We are going to try the GradientBoostingRegressor model where our aim will be to achieve the good accuracy with reasonable parameters and reasonable
+training time. 
+</p>
+""", unsafe_allow_html=True
+)
+st.write('#')
+st.markdown(
+"""
+<p style="font-size:15px;">
+Hyperparameter tuning with different learning rates and different number of estimators. 
+</p>
+""", unsafe_allow_html=True
+)
+st.image("./Images/gbctuning.png")
+
+st.write('#')
+st.markdown(
+"""
+<p style="font-size:15px;">
+Train vs Test accuracy. 
+</p>
+""", unsafe_allow_html=True
+)
+st.image("./Images/gbrtrainvstest.png")
+
+st.write('#')
+st.markdown(
+"""
+<p style="font-size:15px;">
+Error vs n_estimators. 
+</p>
+""", unsafe_allow_html=True
+)
+st.image("./Images/errorvsestimators.png")
+
+st.write('#')
+st.markdown(
+"""
+<p style="font-size:15px;">
+Actual vs Predicted values scatterplot. 
+</p>
+""", unsafe_allow_html=True
+)
+st.image("./Images/actualvspredicted.png")
+
+st.write('#')
+col1,col2 = st.columns(2, gap='large')
+with col1:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Sensible/Best parameters</b>
+    </p>
+     """, unsafe_allow_html=True
+    )
+    st.image("./Images/gbrscores.png")
+
+with col2:
+    st.write(
+    """
+    <p style="font-size: 15px;">
+    <b>Model Performance</b>
+    </p>
+     """, unsafe_allow_html=True
+    )    
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    The model performance on hyperparameter tuning clearly shows us that we can either keep the learning rate high or n_estimators as high. 
+    Since we want to avoid the overfitting chance although gradient boosting are considered as robust to overfitting, we chose to have less
+    number of estimators and high learning rate. We observed that the high learning rate is not causing the overshoot issue and learning rate
+    is not a subject to overfitting issue.
+    </p>
+    """, unsafe_allow_html=True
+    )
+
+st.write(
+    """
+    ***
+    """
+)
+
+st.caption(
+    """
+    Interactive app building based on best model is in progress . . . . .
     """
 )
