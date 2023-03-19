@@ -176,7 +176,7 @@ st.write(
 
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature</i> : Promotion Name
     </p>
      """, unsafe_allow_html=True
@@ -232,11 +232,16 @@ with col2:
     )
     st.image("./Images/promobox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #----
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature</i> : Media Type
     </p>
      """, unsafe_allow_html=True
@@ -292,11 +297,16 @@ with col1:
     )
     st.image("./Images/mediatypebox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     Correlation among Store Level Features
     </p>
      """, unsafe_allow_html=True
@@ -343,11 +353,16 @@ with col2:
     )
     st.image("./Images/corrheatmap.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> Food Category
     </p>
      """, unsafe_allow_html=True
@@ -399,11 +414,16 @@ with col1:
     )
     st.image("./Images/foodcatbox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> Education
     </p>
      """, unsafe_allow_html=True
@@ -454,11 +474,16 @@ with col2:
     )
     st.image("./Images/educationbox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> Member Card
     </p>
      """, unsafe_allow_html=True
@@ -507,11 +532,16 @@ with col1:
     )
     st.image("./Images/membercardbox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> Occupation
     </p>
      """, unsafe_allow_html=True
@@ -527,6 +557,21 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total occupation categories from input data are 5.
+    Most effective occupations for customer acquisition are <i>professional</i> and 
+    <i>skilled manual</i> with % acquisition of 33% and 26.5% respectively.
+    CAC has different spread and variance for different occupation.
+    Median CAC is above $2.5M and below $3.0M for all categories of occupation.
+    \n\n
+    <i>Professional and Skilled Manual</i> together represents around 60% of total customers acquired.
+    This gives us an inference that customers from working class community are not someone who can be ignored while deciding the campaign ads.
+   </p>
+    """, unsafe_allow_html=True
+    )
+
 
 with col2:
     st.write(
@@ -547,11 +592,16 @@ with col2:
     )
     st.image("./Images/occupationbox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> House Owner
     </p>
      """, unsafe_allow_html=True
@@ -559,7 +609,7 @@ st.write(
 
 col1, col2 = st.columns(2, gap='small')
 
-with col1:
+with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -567,8 +617,20 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total house owner categories from input dataset are 2. It's a binary feature.
+    Most effective category for customer acquisition is houseowner customers with % acquisition of 60.4%.
+    CAC has different spread and variance under different categories. Non-house owner has larger spread of CAC.
+    Median CAC is above $2.5M and below $3.0M for houseowner and non-houseowner.
+    \n\n
+    It is an interesting perspective where we came to know how the customers acquired are distributed <i>w.r.t.</i> being houseowner.
+   </p>
+    """, unsafe_allow_html=True
+    )
 
-with col2:
+with col1:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -587,11 +649,16 @@ with col2:
     )
     st.image("./Images/houseownerbox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     <i>Feature:</i> Customer Salary
     </p>
      """, unsafe_allow_html=True
@@ -606,6 +673,21 @@ with col1:
     Observations
     </p>
      """, unsafe_allow_html=True
+    )
+
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Total income bins available from input dataset are 8.
+    Most effective income bin for customer acquisition is 30K-50K with % acquisition of 32.3%
+    CAC has different spread and variance under different income bins.
+    Median CAC is above $2.5M and below $3.0M for all the income bins.
+    \n\n
+    Customer's income gives an interesting inference that lower income consumers have higher percentage of becoming registered customers.
+    \n\n
+    Customer's in the bin range of 10K-30K and 30K-50K together represents around 54% of total customers acquired in the past.
+    </p>
+    """, unsafe_allow_html=True
     )
 
 with col2:
@@ -627,11 +709,16 @@ with col2:
     )
     st.image("./Images/incomebox.png")
 
+st.write(
+    """
+    ***
+    """
+)
 #--
 st.write("#")
 st.write(
     """
-    <p style="font-size: 17px;">
+    <p style="font-size: 18px;">
     Correlation among Product Level Features
     </p>
      """, unsafe_allow_html=True
@@ -639,7 +726,7 @@ st.write(
 
 col1, col2 = st.columns(2, gap='small')
 
-with col1:
+with col2:
     st.write(
     """
     <p style="font-size: 17px;">
@@ -647,8 +734,20 @@ with col1:
     </p>
      """, unsafe_allow_html=True
     )
+    st.markdown(
+    """
+    <p style="font-size:15px;">
+    Linear correlation is absent among the individual features.
+    Dark green cells show strong positive correlation and dark brown shows strong negative correlation.
+    Most of the dark green cells seen are the correlation with self. So, linear correlation is absent among the features.
+    Correlation among numerical features is plotted and we can see that CAC has strong positive correlation with SRP i.e. Store Retail Price.
+    Scatterplot between CAC and SRP shows clear heteroskedasticity although it is linear.
+    This gives us an inference that a linear machine learning model will not work here and we may have to try non-linear ML models to predict the cost.
+    </p>
+    """, unsafe_allow_html=True
+    )
 
-with col2:
+with col1:
     st.write(
     """
     <p style="font-size: 17px;">
